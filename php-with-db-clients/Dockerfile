@@ -25,17 +25,5 @@ RUN \
     apt-get update && \
 # Installing packages
     apt-get install -yq --force-yes --fix-missing \
-    apt-transport-https \
-    git \
-    libssl-dev \
     mongodb-org-shell mongodb-org-tools \
-    mysql-client \
-    supervisor \
-    zlib1g-dev && \
-    docker-php-ext-install -j$(nproc) \
-    mbstring \
-    pdo \
-    pdo_mysql \
-    zip && \
-    pecl install mongodb && \
-    docker-php-ext-enable mongodb
+    mysql-client
